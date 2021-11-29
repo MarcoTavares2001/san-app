@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    margin: 0px;
+}
+
+.contenedor{
+    margin: 3% 0%;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(30%, 1fr));
+    grid-auto-rows: 42vh;
+    grid-gap: 1rem;
+    margin: 0% 5%;
+}
+
+.cards button{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+}
+
+.cards button *{
+    background-color: white;
+    font-size: 20px;
+    padding: 5px;
+    position: absolute;
+}
+
+.cards button :first-child{
+    top: -2px;
+    left: -2px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px 0px 5px 0px;
+}
+
+.cards button :nth-child(0n+2){
+    top: -2px;
+    right: -2px;
+    border-radius: 0px 5px 0px 5px;
+    color: green;
+}
+
+.cards button :last-child{
+    bottom: -2px;
+    right: -2px;
+    border-radius: 5px 0px 5px 0px;
+}
+
+.matematicas .card, .matematicas .cards button *{
+    border: 2px solid #D92DDB;
+}
+
+.lenguaje .card, .lenguaje .cards button *{
+    border: 2px solid #F26527;
+}
+
+.exploracion .card, .exploracion .cards button *{
+    border: 2px solid #388e3c;
+}
+
+.fa-palette{
+    color: #673ab7;
+}
+
+.fa-thumbtack{
+    color: red !important;
+}
+
+.fa-eye{
+    color:lightseagreen;
+}
+
+
+.fa-book-open{
+    color:mediumorchid;
+}
+
+
+@media (max-width: 830px) {
+    .cards{
+        grid-template-columns: repeat(1, minmax(90%, 1fr));
+    }
+  }

@@ -1,0 +1,136 @@
+*{
+    font-family: "Open Sans", sans-serif;
+}
+
+body{
+    margin: 0px;
+    background-image: url("../img/pasto.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-direction: column;
+    width: calc(100% - 40px);
+    height: auto;
+    padding: 20px;
+    margin: 0px 0px 20px 0px;
+}
+
+.menu{
+    width: calc(100vw - 40px);
+    height: 50px;
+    margin: 20px 20px 0px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a{
+    font-size: xx-large;
+    cursor: pointer;
+    color: #03a9f4;
+}
+
+.contenedor ul{
+    list-style-type: none;
+    display: inline-flex;
+    padding: 0px;
+    position: relative;
+}
+
+.contenedor ul li i, .contenedor ul > a{
+    font-size: 24px;
+    margin-right: 15px;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 8px;
+}
+
+h4{
+    margin: 0px;
+}
+
+.contenedor > span{
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+.center-flex{
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+}
+
+.center-flex > span{
+    margin-bottom: 15px;
+}
+
+@media (max-width: 830px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0px 20px 0px;
+        height: auto;
+    }
+}
+
+canvas {
+    width: 400px;
+    height: 400px;
+    border: 2px solid cornflowerblue;
+    border-radius: 20px;
+    /*background-color: black;*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    touch-action: none;
+}
+
+.active{
+    background-color: lightgrey;
+}
+
+.fa-volume-up{
+    color: blue; 
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.fa-music{
+    color: purple;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.fa-music.active{
+    background-color: rgb(0,0,0,0.15);
+}
+
+.fa-volume-up.active{
+    background-color: rgb(167 154 154 / 51%);
+    transition: .5;
+}
+
+#mute{
+    margin-left: 10px;
+    padding: 5px;
+}
+
+#download{
+    margin-left: 10px;
+}
+
+#mute.active{
+    background-color: rgb(0,0,0,0.15);
+    border-radius: 20px;
+}
